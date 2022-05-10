@@ -2,7 +2,7 @@ import { useState } from "react";
 import ContentBox from "./contentBox/ContentBox";
 import Tab from "./tab/Tab";
 
-const TabBox = () => {
+const TabBox = ({ collection, setCollection, wishlist, setWishlist }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -26,7 +26,7 @@ const TabBox = () => {
         }}
       >
         <Tab
-          text="explore tehe"
+          text="Explore Crystals"
           onClick={() => setActiveTab(0)}
           isActive={activeTab === 0}
         ></Tab>
@@ -42,7 +42,13 @@ const TabBox = () => {
         ></Tab>
       </div>
 
-      <ContentBox activeTab={activeTab}></ContentBox>
+      <ContentBox
+        collection={collection}
+        setCollection={setCollection}
+        wishlist={wishlist}
+        setWishlist={setWishlist}
+        activeTab={activeTab}
+      ></ContentBox>
     </div>
   );
 };

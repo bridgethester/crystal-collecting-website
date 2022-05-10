@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Header from "../header/Header";
 import TabBox from "../tabBox/TabBox";
 
 const Main = () => {
+  const [collection, setCollection] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
   return (
     <div
       id="maindiv"
@@ -12,7 +15,12 @@ const Main = () => {
       }}
     >
       <Header />
-      <TabBox />
+      <TabBox
+        collection={collection}
+        setCollection={setCollection}
+        wishlist={wishlist}
+        setWishlist={setWishlist}
+      />
     </div>
   );
 };

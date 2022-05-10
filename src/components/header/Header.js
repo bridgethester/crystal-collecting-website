@@ -10,13 +10,13 @@ const Header = () => {
         justifyContent: "space-between",
       }}
     >
-      <div style={{ marginLeft: 5 }}>cry</div>
+      <div style={{ marginLeft: 5 }}>***</div>
       <h3
         style={{ color: "white", padding: 0, margin: 0, textAlign: "center" }}
       >
         Crystal Collecting Community
       </h3>
-      <div style={{ marginRight: 5 }}>cry</div>
+      <div style={{ marginRight: 5 }}>***</div>
     </div>
   );
 };
