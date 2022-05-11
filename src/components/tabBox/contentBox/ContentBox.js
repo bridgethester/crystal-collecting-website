@@ -29,7 +29,16 @@ const ContentBox = ({
   };
 
   return (
-    <div style={{ backgroundColor: "transparent" }}>{makeTabContent()}</div>
+    <div
+      style={{
+        backgroundColor: "transparent",
+        height: "calc(100% - 55px)",
+        overflow: "scroll",
+        paddingBottom: 5,
+      }}
+    >
+      {makeTabContent()}
+    </div>
   );
 };
 export default ContentBox;

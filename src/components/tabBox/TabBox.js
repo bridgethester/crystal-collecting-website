@@ -23,6 +23,7 @@ const TabBox = ({ collection, setCollection, wishlist, setWishlist }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          paddingTop: 5,
         }}
       >
         <Tab

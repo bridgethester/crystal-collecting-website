@@ -14,7 +14,9 @@ const Header = () => {
       <h3
         style={{ color: "white", padding: 0, margin: 0, textAlign: "center" }}
       >
-        Crystal Collecting Community
+        Crystal Collecting Catalog
+        <br></br> ♡<br></br>- a place to keep track of your current & growing
+        crystal collection -
       </h3>
       <div style={{ marginRight: 5 }}>***</div>
     </div>
