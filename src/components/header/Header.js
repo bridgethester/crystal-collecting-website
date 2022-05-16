@@ -1,10 +1,12 @@
+import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+
 const Header = () => {
   return (
     <div
       style={{
         height: 75,
         width: "100%",
-        backgroundColor: "pink",
+        backgroundColor: "#6F4E37",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",

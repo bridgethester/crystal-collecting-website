@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import Header from "../header/Header";
 import TabBox from "../tabBox/TabBox";
+import crystalpicture from "./Users/bridgethester/Downloads/crystalpicture.svg";
 
 const Main = () => {
   const [collection, setCollection] = useState([]);
   const [wishlist, setWishlist] = useState([]);
-
-  useEffect(() => {
-    if (collection.length > 0)
-      localStorage.collection = JSON.stringify(collection);
-  }, [collection]);
-
-  useEffect(() => {
-    if (wishlist.length > 0) localStorage.wishlist = JSON.stringify(wishlist);
-  }, [wishlist]);
-
-  useEffect(() => {
+  const firstRender = useRef(true);
+  useLayoutEffect(() => {
+    if (!firstRender.current) return;
     if (localStorage.collection) {
       setCollection(JSON.parse(localStorage.collection));
     }
@@ -24,13 +17,24 @@ const Main = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (firstRender.current) firstRender.current = false;
+    localStorage.collection = JSON.stringify(collection);
+  }, [collection]);
+
+  useEffect(() => {
+    if (firstRender.current) firstRender.current = false;
+    localStorage.wishlist = JSON.stringify(wishlist);
+  }, [wishlist]);
+
   return (
     <div
       id="maindiv"
       style={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "plum",
+        backgroundColor: "#B2AC88",
+        //animation: "bgColorKeyframes 10s infinite linear",
       }}
     >
       <Header />
@@ -43,5 +47,7 @@ const Main = () => {
     </div>
   );
 };
+
+<img>src={"./Users/bridgethester/Downloads/crystalpicture.svg"}</img>;
 
 export default Main;

@@ -31,7 +31,8 @@ const ContentBox = ({
   return (
     <div
       style={{
-        backgroundColor: "transparent",
+        backgroundColor: "white",
+        opacity: ".65",
         height: "calc(100% - 55px)",
         overflow: "scroll",
         paddingBottom: 5,

@@ -29,7 +29,16 @@ const CollectionBox = ({ collection, setCollection }) => {
               <td style={{ border: "1px solid black" }}>{cry.purp}</td>
               <td style={{ border: "1px solid black" }}>{cry.describe}</td>
               <td style={{ border: "1px solid black" }}>
-                <button onClick={() => handleDelete(cry)}>delete</button>
+                <button
+                  style={{
+                    backgroundColor: "#6F4E37",
+                    color: "white",
+                    fontWeight: "bold",
+                  }}
+                  onClick={() => handleDelete(cry)}
+                >
+                  delete
+                </button>
               </td>
             </tr>
           );

@@ -27,8 +27,26 @@ const ExploreContent = ({
               <td style={{ border: "1px solid black" }}>{cry.purp}</td>
               <td style={{ border: "1px solid black" }}>{cry.describe}</td>
               <td style={{ border: "1px solid black" }}>
-                <button onClick={() => handleAddCol(cry)}>+collection</button>
-                <button onClick={() => handleAddWish(cry)}>+wishlist</button>
+                <button
+                  style={{
+                    backgroundColor: "#6F4E37",
+                    color: "white",
+                    fontWeight: "bold",
+                  }}
+                  onClick={() => handleAddCol(cry)}
+                >
+                  + collection
+                </button>
+                <button
+                  style={{
+                    backgroundColor: "#6F4E37",
+                    color: "white",
+                    fontWeight: "bold",
+                  }}
+                  onClick={() => handleAddWish(cry)}
+                >
+                  + wishlist
+                </button>
               </td>
             </tr>
           );
