@@ -1,7 +1,6 @@
 import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import Header from "../header/Header";
 import TabBox from "../tabBox/TabBox";
-import crystalpicture from "./Users/bridgethester/Downloads/crystalpicture.svg";
 
 const Main = () => {
   const [collection, setCollection] = useState([]);
@@ -47,7 +46,5 @@ const Main = () => {
     </div>
   );
 };
-
-<img>src={"./Users/bridgethester/Downloads/crystalpicture.svg"}</img>;
 
 export default Main;
